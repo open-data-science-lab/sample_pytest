@@ -3,8 +3,8 @@
 from src import encoder
 
 
-def test_split():
-    assert encoder.encode("Мама мыла раму") == {"Мама": 0, "мыла": 1, "раму": 2}
+def test_split(test_string, test_dict):
+    assert encoder.encode(test_string) == test_dict
 
 
 def test_blank():
@@ -15,5 +15,5 @@ def test_stars():
     assert encoder.encode("* " * 1000) == {"*": 0}
 
 
-def test_case():
-    assert encoder.encode("Мама мыла раму", preserve_case=False) == {"мама": 0, "мыла": 1, "раму": 2}
+def test_case(test_string, test_dict_lower):
+    assert encoder.encode(test_string, preserve_case=False) == test_dict_lower
