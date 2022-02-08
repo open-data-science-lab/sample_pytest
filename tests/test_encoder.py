@@ -2,6 +2,7 @@
 
 from src import encoder
 
+
 def test_split():
     assert encoder.encode("Мама мыла раму") == {"Мама": 0, "мыла": 1, "раму": 2}
 
