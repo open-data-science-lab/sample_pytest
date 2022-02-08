@@ -19,8 +19,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install -r requirements.txt wheel pytest
+          python -m pip install -r requirements.txt wheel pytest flake8
 
       - name: Run test suite
         run: |
           pytest tests -v
+
+      - name: Check style
+        run: |
+          flake8 . --max-line-length=127

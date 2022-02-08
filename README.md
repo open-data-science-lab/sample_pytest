@@ -1,2 +1,2 @@
 # sample_pytest
-pytest_sample_project
+Пример проекта с тестами
